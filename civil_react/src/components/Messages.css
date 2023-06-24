@@ -1,0 +1,63 @@
+/* Messages.css */
+.messages-container {
+    background-color: #FEFCFF; /* light gray, butter-like color */
+    color: #000; /* black text */
+    padding: 20px 200px;
+    max-width: 50%; /* set maximum width to 75% of the parent's width */
+    margin: auto; /* center the element horizontally */
+    /*border: 1px solid #000;  thin black border */
+    /*border-radius: 5px; /* slightly rounded borders */
+    /* display: flex; */
+  }
+  
+  .message {
+    background-color: #FFF; /* white background for individual message */
+    padding: 10px ;
+    border: 1px solid gray; /* thin black border */
+    border-radius: 5px;  
+    margin-bottom: 10px; /* space between messages */
+  }
+  
+  .message p {
+    margin-bottom: 0.5em; /* space between message text and buttons */
+  }
+  
+  .message button {
+    background-color: gray; /* black background */
+    color: #FFF; /* white text */
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px; /* space between buttons */
+    cursor: pointer;
+  }
+  
+  .message button:hover {
+    background-color: #FFF; /* white background when hover */
+    color: gray; /* black text when hover */
+    /* border: 1px solid #000; */
+  }
+  
+  .new-message-form {
+    margin-top: 20px; /* space between messages list and new message form */
+  }
+  
+  .new-message-form input {
+    width: 80%;
+    padding: 50px 20px;
+  }
+  
+  .new-message-form button {
+    background-color: gray; /* black background */
+    color: #FFF; /* white text */
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px; /* space between input and button */
+    cursor: pointer;
+  }
+  
+  .new-message-form button:hover {
+    background-color: #FFF; /* white background when hover */
+    color: gray; /* black text when hover */
+    /* border: 1px solid #000; */
+  }
+  

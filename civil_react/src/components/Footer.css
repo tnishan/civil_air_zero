@@ -1,0 +1,27 @@
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  whitesmoke;
+    color: #000;
+    padding: 10px 0;
+    text-align: center;
+    /* height: 10vh; */
+    /* border-top: 1px solid #000; thin black line */
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
