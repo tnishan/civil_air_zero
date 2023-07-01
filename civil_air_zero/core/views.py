@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Message
-from .serializers import MessageSerializer
+from .models import Message,Footing_Isolated
+from .serializers import MessageSerializer, Footing_Isolated_Serializer
 from django.http import Http404
 
 
@@ -50,3 +50,33 @@ class MessageDetail(APIView):
         message = self.get_object(pk)
         message.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+def calculate_volume(self, validated_data):
+    length = validated_data.get('footing_length', 0)
+    width = validated_data.get('footing_depth', 0)
+    depth = validated_data.get('input_depth1', 0)
+    
+    # Calculate the volume
+    volume = length * width * depth
+    return volume
+
+
+
+class FootingAPI(APIView):
+    def post(self, request, format=None):
+        serializer = Footing_Isolated_Serializer(data=request.data)
+        if serializer.is_valid():
+            volume = serializer.calculate_volume(serializer.validated_data)
+
+            # Add the volume to the response data
+            response_data = serializer.data
+            response_data['volume'] = volume
+
+            # serializer.save()  # Save the data to your model if you want
+            return Response(response_data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def get(self, request, format=None):
+        footings = Footing_Isolated.objects.all()
+        serializer = Footing_Isolated_Serializer(footings, many=True)
+        return Response(serializer.data)
