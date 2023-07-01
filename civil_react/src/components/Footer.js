@@ -12,10 +12,7 @@ class Footer extends React.Component {
             <li><Link to="/privacy">Privacy Policy</Link></li>
             <li><Link to="/terms">Terms of Service</Link></li>
           </ul>
-          <p>Kathmandu, Nepal</p>
-          <p>Phone: +977-9851111053</p>
-          <p>Email: nishan.idea23@.com</p>
-          <p>© 2023 Civil Air</p>
+
         </div>
       </footer>
     );
