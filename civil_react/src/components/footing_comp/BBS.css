@@ -1,0 +1,28 @@
+.bbs_body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .bbs_body th, .bbs_body td {
+    padding: 10px 20px ;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .bbs_body th {
+    background-color: #FAFAFA;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .bbs_body tr:nth-child(even) {
+    background-color: #F7F7F7;
+  }
+  
+  .bbs_body tr:hover {
+    background-color: #EDEDED;
+    transition: background-color 0.3s ease;
+  }
+  
