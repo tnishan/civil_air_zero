@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Isolated_Footing.css";
 
+
 const Footing = () => {
   const [inputs, setInputs] = useState({
     footing_length: "",
@@ -138,6 +139,9 @@ const Footing = () => {
         </button>
         <button className="submit_button blue" type="submit" onClick={handleSubmit}>
           Create Estimation Sheet
+        </button>
+        <button className="submit_button blue" type="submit" onClick={handleSubmit}>
+          Add to Footing List
         </button>
       </div>
 
